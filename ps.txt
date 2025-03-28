@@ -1,0 +1,63 @@
+Course Scheduling System: Priya is a member from the training department of a company who has to prepare a training plan that has different courses. Few of these courses need some prerequisite courses to be completed. The goal is to prepare a training plan such that all the courses are included in the correct order and the learning is on track.
+
+import java.util.*;
+
+public class CourseSchedule {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+       
+        System.out.print("Enter the number of courses (N): ");
+        int N = scanner.nextInt();
+        
+        System.out.print("Enter the number of prerequisite pairs: ");
+        int P = scanner.nextInt();
+
+        List<List<Integer>> adjList = new ArrayList<>();
+        int[] inDegree = new int[N];
+       
+        for (int i = 0; i < N; i++) {
+            adjList.add(new ArrayList<>());
+        }
+
+        System.out.println("Enter the prerequisite pairs (course, prerequisite): ");
+        for (int i = 0; i < P; i++) {
+            int course = scanner.nextInt();
+            int prereq = scanner.nextInt();
+            
+            adjList.get(prereq).add(course);
+            inDegree[course]++;
+        }
+
+    
+        List<Integer> schedule = new ArrayList<>();
+        Queue<Integer> queue = new LinkedList<>();
+
+  
+        for (int i = 0; i < N; i++) {
+            if (inDegree[i] == 0) {
+                queue.add(i);
+            }
+        }
+
+        while (!queue.isEmpty()) {
+            int current = queue.poll();
+            schedule.add(current);
+
+            for (int neighbor : adjList.get(current)) {
+                inDegree[neighbor]--;
+
+                if (inDegree[neighbor] == 0) {
+                    queue.add(neighbor);
+                }
+            }
+        }
+
+        if (schedule.size() == N) {
+            System.out.println("Valid course order: " + schedule);
+        } else {
+            System.out.println("Cycle detected. Scheduling not possible.");
+        }
+
+    }
+}  
