@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="portfolio.png" alt="portfolio image" width="30px" height="30px">
+            <a href="#" class="logo">Vinay</a>
+            
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    
+    <section id="home">
+        <div class="home-container">
+            <div class="home-content">
+                <h1>Dev Intern - Zemoso Technologies</h1>
+                <p>Hi, I'm <strong>Madanambeti Vinay</strong></p>
+            </div>
+            <div class="home-image">
+                <img src="profilemv.jpeg" alt="Profile Image">
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="about-container">
+            <h1>About Me</h1>
+            <div class="about-content">
+                <p>
+                    Hi, I'm <strong>Madanambeti Vinay</strong>, I'm passionate <strong>Computer Science Engineer</strong> with a strong interest in 
+                    <strong>web development</strong> and <strong>problem-solving</strong>. I specialize in building 
+                    <strong>responsive, user-friendly websites</strong>, combining creativity with technical skills.
+                </p>
+                
+                <p>
+                    Currently, I'm working at <strong>Zemoso</strong> as a <strong>Dev Intern</strong>, enhancing my skills in 
+                    <strong>Full Stack Development</strong>. I work with <strong>HTML, CSS, JavaScript, and Git</strong>, focusing on creating 
+                    efficient and optimized solutions. I enjoy solving complex coding challenges and continuously improving my 
+                    technical expertise.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="gallery">
+        <h1>Gallery</h1>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="Image 1.jpeg" alt="Image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="profilemv.jpeg" alt="Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="Image 3.jpg" alt="Image 3">
+            </div>
+            <div class="gallery-item">
+                <img src="Image 4.jpg" alt="Image 4">
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h1>Contact Me</h1>
+                <div class="contact-details">
+                    <p><i class="fas fa-envelope"></i> vinaymadanambeti@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +91 9876345675</p>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/vinay-2403" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+
+                <a href="https://drive.google.com/file/d/1dixdeD8eLRzXTJm6G_NKiElGdkPyNcY_/view?usp=drivesdk" class="btn-download" download>Download CV</a>
+            </div>
+
+            <div class="contact-form">
+                <form action="submit.html" method="get" target="_blank">
+                    <input type="text" name="name" placeholder="Your Name" pattern="[A-Za-z]" title="Please enter only Letters (A-Z, a-z)" required>
+                    <input type="email" name="email" placeholder="Your Email" required >
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div id="go">
+    <a href="#home">Go Back Home</a>
+</div>
+    <footer>
+        <p>&copy; 2025 Vinay Madanambeti. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
