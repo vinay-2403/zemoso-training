@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debounce</title>
+</head>
+<body>
+    <input type="text" id="searchInput" placeholder="Type something">
+    <script>
+        function debounce(func, delay) {
+            let timeoutId;
+            return function (...args) {  //it collects any number of arguments passed to this function.
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                func.apply(this, args); 
+            }, delay); 
+            };
+        }
+
+  function fetchData(query) {
+    console.log("Fetching data for:", query);
+  }
+
+  const debouncedFetch = debounce(fetchData, 4000);
+
+  const input = document.getElementById("searchInput");
+
+  input.onkeyup = function () {
+    debouncedFetch(this.value);
+  };
+    </script>
+   
+</body>
+</html>
